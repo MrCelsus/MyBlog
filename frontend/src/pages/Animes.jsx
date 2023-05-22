@@ -1,9 +1,13 @@
 import React from "react";
-import animes from "../data.json";
+import AnimeCard from "@components/AnimeCard";
+import articles from "../data.json";
 
 function Animes() {
-  console.info(animes);
-  return <div>Animes</div>;
+  return (
+    <section>
+      <AnimeCard article={articles[0]} />
+    </section>
+  );
 }
 
 export default Animes;
