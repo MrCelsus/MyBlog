@@ -1,12 +1,18 @@
-import React from 'react'
+import React from "react";
+import PropTypes from "prop-types";
+import ArticleType from "../types/article";
 
-const AnimeCard = ({ anime }) => {
+function AnimeCard({ article }) {
   return (
     <article>
-      <h1>{anime.title}</h1>
-      <h2>{anime.original_title}</h2>
+      <h1>{article.title}</h1>
+      <h2>{article.original_title}</h2>
     </article>
-  )
+  );
 }
 
-export default AnimeCard
+AnimeCard.propTypes = {
+  article: PropTypes.instanceOf(ArticleType).isRequired,
+};
+
+export default AnimeCard;
