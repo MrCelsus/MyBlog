@@ -6,7 +6,7 @@ import ArticleType from "../types/article";
 function AnimeCard({ article }) {
   return (
     <section className="card-container">
-      <img src={article.image.src} alt={article.image.alt} />
+      <img src={article.src} alt={article.alt} />
       <h2>{article.title}</h2>
       <h3>{article.original_title}</h3>
       <Link to={`/animes/${article.id}`}>
