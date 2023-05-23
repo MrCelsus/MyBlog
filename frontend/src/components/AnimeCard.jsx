@@ -1,13 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import ArticleType from "../types/article";
 
 function AnimeCard({ article }) {
   return (
-    <article>
-      <h1>{article.title}</h1>
-      <h2>{article.original_title}</h2>
-    </article>
+    <section className="card-container">
+      <img src={article.image.src} alt={article.image.alt} />
+      <h2>{article.title}</h2>
+      <h3>{article.original_title}</h3>
+      <Link to={`/animes/${article.id}`}>
+        <button type="button" className="btn">
+          {" "}
+          En savoir plus{" "}
+        </button>
+      </Link>
+    </section>
   );
 }
 
