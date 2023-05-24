@@ -1,13 +1,21 @@
-import Home from "./pages/Home";
-
-import "./App.css";
+import Animes from "@pages/Animes";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import OneAnime from "@pages/OneAnime";
+import "./App.scss";
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-      <p>coucou</p>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <header>
+          <h1>My blog Anime</h1>
+        </header>
+        <Routes>
+          <Route path="/" element={<Animes />} />
+          <Route path="/animes/:id" element={<OneAnime />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
